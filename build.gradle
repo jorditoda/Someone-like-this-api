@@ -18,9 +18,25 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:3.3.4'
+
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	// https://mvnrepository.com/artifact/com.azure/azure-spring-data-cosmos
+	implementation 'com.azure:azure-spring-data-cosmos:5.16.0'
+	// https://mvnrepository.com/artifact/com.azure.spring/spring-cloud-azure-starter-data-cosmos
+	implementation 'com.azure.spring:spring-cloud-azure-starter-data-cosmos:5.16.0'
+
+
+	//lombok
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 tasks.named('test') {
